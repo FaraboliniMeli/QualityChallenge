@@ -1,0 +1,42 @@
+[
+	{
+		"districtName": "Vila Regente Feijó",
+		"squareMeterPrice": 10.5
+	},
+	{
+		"districtName": "Anália Franco",
+		"squareMeterPrice": 30.0
+	},
+	{
+		"districtName": "Tatuapé",
+		"squareMeterPrice": 20.0
+	},
+	{
+		"districtName": "Vila Nova Conceição",
+		"squareMeterPrice": 40.0
+	},
+	{
+		"districtName": "Vila Madalena",
+		"squareMeterPrice": 35.0
+	},
+	{
+		"districtName": "Vila Prudente",
+		"squareMeterPrice": 25.0
+	},
+	{
+		"districtName": "Santana",
+		"squareMeterPrice": 15.0
+	},
+	{
+		"districtName": "Moema",
+		"squareMeterPrice": 45.0
+	},
+	{
+		"districtName": "Pinheiros",
+		"squareMeterPrice": 22.0
+	},
+	{
+		"districtName": "Morumbi",
+		"squareMeterPrice": 32.0
+	}
+]
