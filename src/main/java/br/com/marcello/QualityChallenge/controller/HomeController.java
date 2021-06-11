@@ -1,7 +1,6 @@
 package br.com.marcello.QualityChallenge.controller;
 
 import br.com.marcello.QualityChallenge.dto.*;
-import br.com.marcello.QualityChallenge.model.Home;
 import br.com.marcello.QualityChallenge.repository.DistrictRepository;
 import br.com.marcello.QualityChallenge.service.HomeService;
 import org.springframework.beans.factory.annotation.Autowired;
