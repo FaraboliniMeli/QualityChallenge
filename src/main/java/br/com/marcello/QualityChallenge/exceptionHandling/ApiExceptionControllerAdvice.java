@@ -5,6 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
 import java.time.LocalDate;
 import java.util.NoSuchElementException;
@@ -13,6 +14,7 @@ import java.util.NoSuchElementException;
 public class ApiExceptionControllerAdvice {
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
     public ResponseEntity<ApiExceptionResponse> methodArgumentNotValidHandler(MethodArgumentNotValidException e) {
         StringBuilder sb = new StringBuilder();
         e.getBindingResult().getAllErrors()
@@ -28,6 +30,7 @@ public class ApiExceptionControllerAdvice {
     }
 
     @ExceptionHandler(Exception.class)
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public ResponseEntity<ApiExceptionResponse> globalExceptionHandler(Exception e) {
 
         ApiExceptionResponse response = new ApiExceptionResponse();
@@ -40,6 +43,7 @@ public class ApiExceptionControllerAdvice {
     }
 
     @ExceptionHandler(NoSuchElementException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
     public ResponseEntity<ApiExceptionResponse> noSuchElementHandler(NoSuchElementException e) {
 
         ApiExceptionResponse response = new ApiExceptionResponse();

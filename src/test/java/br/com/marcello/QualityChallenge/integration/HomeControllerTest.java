@@ -67,8 +67,8 @@ public class HomeControllerTest {
                 .andDo(print()).andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.roomsAreas").isMap())
-                .andExpect(jsonPath("$.roomsAreas.Bathroom").value(4.0))
-                .andExpect(jsonPath("$.roomsAreas.Bedroom").value(15.0));
+                .andExpect(jsonPath("$.roomsAreas.Bathroom").value(this.BATHROOM_AREA))
+                .andExpect(jsonPath("$.roomsAreas.Bedroom").value(this.BEDROOM_AREA));
     }
 
     @Test
